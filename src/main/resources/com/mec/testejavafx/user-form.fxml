@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mec.testejavafx.UserFormController">
+    <!-- Título -->
+    <Label text="Formulário de Informações" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <!-- Formulário -->
+    <GridPane alignment="CENTER" hgap="10" vgap="10">
+        <GridPane.margin>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </GridPane.margin>
+
+        <!-- Linha 1: Nome -->
+        <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nome" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Linha 2: E-mail -->
+        <Label text="E-mail:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="email" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Linha 3: Endereço -->
+        <Label text="Endereço:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="endereco" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Linha 4: Telefone -->
+        <Label text="Telefone:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="telefone" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Linha 5: Veículo -->
+        <Label text="Veículo:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="veiculo" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Linha 6: Placa -->
+        <Label text="Placa:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="placa" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Botão de Envio -->
+        <Button text="Enviar" onAction="#onCadastrarButtonClick" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    </GridPane>
+</VBox>

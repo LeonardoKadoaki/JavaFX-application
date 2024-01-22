@@ -19,9 +19,16 @@ class HomeController {
 
     @FXML
     private fun openUserFormScreen() {
-        val width = screenWidth * 0.4 // 100% da largura da tela
-        val height = screenHeight * 0.5 // 90% da altura da tela
+        val width = screenWidth * 0.5 // 100% da largura da tela
+        val height = screenHeight * 0.6 // 90% da altura da tela
         changeScene("user-form.fxml", width, height, "Cadastro de Cliente")
+    }
+
+    @FXML
+    private fun openVehicleFormScreen() {
+        val width = screenWidth * 0.5 // 100% da largura da tela
+        val height = screenHeight * 0.6 // 90% da altura da tela
+        changeScene("vehicle-form.fxml", width, height, "Cadastro de veículo")
     }
 
     @FXML

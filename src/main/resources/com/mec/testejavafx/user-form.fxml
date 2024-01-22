@@ -15,6 +15,10 @@
             <Insets top="20" right="20" bottom="20" left="20"/>
         </GridPane.margin>
 
+        <!-- Linha 0: Cpf -->
+        <Label text="CPF:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="cpf" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="11122233345"/>
+
         <!-- Linha 1: Nome -->
         <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
         <TextField fx:id="nome" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Fulano de tal"/>
@@ -24,22 +28,36 @@
         <TextField fx:id="email" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="exemplo@gmail.com"/>
 
         <!-- Linha 3: Endereço -->
-        <Label text="Endereço:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-        <TextField fx:id="endereco" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="Rua Porsche, 982 - Jardim Ferrari"/>
+        <Label text="Cep:" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+        <TextField fx:id="cep" GridPane.rowIndex="0" GridPane.columnIndex="5" promptText="12345000"/>
+        <Button text="Preencher endereço" onAction="#onFindAddressButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="6"/>
+
+        <Label text="Logradouro:" GridPane.rowIndex="1" GridPane.columnIndex="4"/>
+        <TextField fx:id="logradouro" GridPane.rowIndex="1" GridPane.columnIndex="5" promptText="Rua Porsche"/>
+
+        <Label text="Bairro:" GridPane.rowIndex="2" GridPane.columnIndex="4"/>
+        <TextField fx:id="bairro" GridPane.rowIndex="2" GridPane.columnIndex="5" promptText="Jardim Ferrari"/>
+
+        <Label text="Cidade:" GridPane.rowIndex="3" GridPane.columnIndex="4"/>
+        <TextField fx:id="cidade" GridPane.rowIndex="3" GridPane.columnIndex="5" promptText="São Paulo"/>
+
+        <Label text="UF:" GridPane.rowIndex="4" GridPane.columnIndex="4"/>
+        <TextField fx:id="uf" GridPane.rowIndex="4" GridPane.columnIndex="5" promptText="SP"/>
+
+        <Label text="Número:" GridPane.rowIndex="5" GridPane.columnIndex="4"/>
+        <TextField fx:id="numero" GridPane.rowIndex="5" GridPane.columnIndex="5" promptText="321"/>
+
+        <Label text="Complemento:" GridPane.rowIndex="6" GridPane.columnIndex="4"/>
+        <TextField fx:id="complemento" GridPane.rowIndex="6" GridPane.columnIndex="5" promptText="ap 124, torre B"/>
 
         <!-- Linha 4: Telefone -->
-        <Label text="Telefone:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-        <TextField fx:id="telefone" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="(11) 91234-4321"/>
-
-        <!-- Linha 5: Veículo -->
-        <Label text="Veículo:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-        <TextField fx:id="veiculo" GridPane.rowIndex="5" GridPane.columnIndex="1" promptText="Mini Cooper S"/>
-
-        <!-- Linha 6: Placa -->
-        <Label text="Placa:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-        <TextField fx:id="placa" GridPane.rowIndex="6" GridPane.columnIndex="1" promptText="ABC-7A90"/>
+        <Label text="Telefone:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="telefone" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="(11) 91234-4321"/>
 
         <!-- Botão de Envio -->
-        <Button text="Enviar" onAction="#onCadastrarButtonClick" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        <Button text="Cadastrar" onAction="#onCadastrarButtonClick" GridPane.rowIndex="8" GridPane.columnIndex="4"/>
+
+        <Button text="voltar para o início" fx:id="homeButton" onAction="#backToHome" GridPane.rowIndex="10" GridPane.columnIndex="4"/>
     </GridPane>
+
 </VBox>

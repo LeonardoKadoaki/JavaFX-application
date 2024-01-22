@@ -17,7 +17,8 @@
 
         <!-- Botão de Envio -->
         <Button text="Cadastrar Cliente" onAction="#openUserFormScreen" GridPane.rowIndex="1" GridPane.columnIndex="1"/><!-- filtrar por placa, cpf, data -->
-        <Button text="Buscar Orçamento" onAction="#abrirTela2" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-        <Button text="Enviar por whatsapp" onAction="#abrirTela3" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Button text="Cadastrar Veiculo" onAction="#openVehicleFormScreen" GridPane.rowIndex="2" GridPane.columnIndex="1"/><!-- filtrar por placa, cpf, data -->
+        <Button text="Buscar Orçamento" onAction="#abrirTela2" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Button text="Enviar por whatsapp" onAction="#abrirTela3" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
     </GridPane>
 </VBox>

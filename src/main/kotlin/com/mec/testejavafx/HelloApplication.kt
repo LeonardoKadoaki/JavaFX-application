@@ -29,7 +29,7 @@ import javafx.stage.Stage
 
 class Main : Application() {
     override fun start(primaryStage: Stage) {
-        val loader = FXMLLoader(javaClass.getResource("home.fxml"))
+        val loader = FXMLLoader(javaClass.getResource("home2.fxml"))
         val root = loader.load<Parent>()
         val controller = loader.getController<HomeController>()
         controller.setStage(primaryStage)

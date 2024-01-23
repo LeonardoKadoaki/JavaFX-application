@@ -1,39 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mec.testejavafx.VechicleFormController">
-    <!-- Título -->
-    <Label text="Dados do veículo" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
-    <GridPane alignment="CENTER" hgap="10" vgap="10">
-        <GridPane.margin>
-            <Insets top="20" right="20" bottom="20" left="20"/>
-        </GridPane.margin>
-
-        <!-- Linha 5: Marca -->
-        <Label text="Marca:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-        <TextField fx:id="marca" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="Mini"/>
-
-        <!-- Linha 5: Veículo -->
-        <Label text="Modelo:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-        <TextField fx:id="modelo" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="Cooper S"/>
-
-        <!-- Linha 5: Veículo -->
-        <Label text="Ano:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-        <TextField fx:id="ano" GridPane.rowIndex="5" GridPane.columnIndex="1" promptText="2015"/>
-
-        <!-- Linha 6: Placa -->
-        <Label text="Placa:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-        <TextField fx:id="placa" GridPane.rowIndex="6" GridPane.columnIndex="1" promptText="ABC-7A90"/>
-
-        <!-- Linha 7: OBS -->
-        <Label text="Observações:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-        <TextField fx:id="observacoes" GridPane.rowIndex="7" GridPane.columnIndex="1" promptText="carro com bateria falhando"/>
-
-        <!-- Botão de Envio -->
-        <Button text="Enviar" onAction="#onCadastrarVeiculoButtonClick" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
-    </GridPane>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.mec.testejavafx.VechicleFormController">
+   <VBox alignment="CENTER" spacing="20.0">
+      <children>
+         <VBox prefHeight="240.0" prefWidth="550.0">
+            <children>
+               <MenuBar VBox.vgrow="NEVER">
+                  <menus>
+                     <Menu mnemonicParsing="false" text="File">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="New" />
+                           <MenuItem mnemonicParsing="false" text="Open…" />
+                           <Menu mnemonicParsing="false" text="Open Recent" />
+                           <SeparatorMenuItem mnemonicParsing="false" />
+                           <MenuItem mnemonicParsing="false" text="Close" />
+                           <MenuItem mnemonicParsing="false" text="Save" />
+                           <MenuItem mnemonicParsing="false" text="Save As…" />
+                           <MenuItem mnemonicParsing="false" text="Revert" />
+                           <SeparatorMenuItem mnemonicParsing="false" />
+                           <MenuItem mnemonicParsing="false" text="Preferences…" />
+                           <SeparatorMenuItem mnemonicParsing="false" />
+                           <MenuItem mnemonicParsing="false" text="Quit" />
+                        </items>
+                     </Menu>
+                     <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Undo" />
+                           <MenuItem mnemonicParsing="false" text="Redo" />
+                           <SeparatorMenuItem mnemonicParsing="false" />
+                           <MenuItem mnemonicParsing="false" text="Cut" />
+                           <MenuItem mnemonicParsing="false" text="Copy" />
+                           <MenuItem mnemonicParsing="false" text="Paste" />
+                           <MenuItem mnemonicParsing="false" text="Delete" />
+                           <SeparatorMenuItem mnemonicParsing="false" />
+                           <MenuItem mnemonicParsing="false" text="Select All" />
+                           <MenuItem mnemonicParsing="false" text="Unselect All" />
+                        </items>
+                     </Menu>
+                     <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                        </items>
+                     </Menu>
+                  </menus>
+               </MenuBar>
+               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="220.0" prefWidth="550.0" VBox.vgrow="ALWAYS">
+                  <children>
+                       <TextField fx:id="marca" layoutX="105.0" layoutY="35.0" promptText="Mini" />
+               
+                          <!-- Linha 5: Marca -->
+                       <Label layoutX="64.0" layoutY="39.0" text="Marca:" />
+                       <TextField fx:id="modelo" layoutX="322.0" layoutY="35.0" promptText="Cooper S" />
+               
+                          <!-- Linha 5: Veículo -->
+                       <Label layoutX="272.0" layoutY="39.0" text="Modelo:" />
+                       <TextField fx:id="ano" layoutX="322.0" layoutY="74.0" promptText="2015" />
+               
+                             <!-- Linha 5: Veículo -->
+                       <Label layoutX="291.0" layoutY="78.0" text="Ano:" />
+                       <TextField fx:id="placa" layoutX="105.0" layoutY="74.0" promptText="ABC-7A90" />
+               
+                          <!-- Linha 6: Placa -->
+                       <Label layoutX="69.0" layoutY="78.0" text="Placa:" />
+                       <TextField fx:id="observacoes" layoutX="105.0" layoutY="114.0" prefHeight="25.0" prefWidth="367.0" promptText="carro com bateria falhando" />
+               
+                          <!-- Linha 7: OBS -->
+                       <Label layoutX="29.0" layoutY="118.0" text="Observações:" />
+               
+                          <!-- Botão de Envio -->
+                       <Button layoutX="251.0" layoutY="158.0" onAction="#onCadastrarVeiculoButtonClick" text="Enviar" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </VBox>
+      </children>
+   </VBox>
 </VBox>

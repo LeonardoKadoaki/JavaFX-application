@@ -50,7 +50,15 @@ class UserFormController {
     private lateinit var complemento: TextField
 
     @FXML
+    lateinit var homeButton: Button
+
+    @FXML
     fun initialize() {
+
+        homeButton.setOnAction {
+            homeButton.scene.window.hide()
+        }
+
         telefone.textProperty().addListener(ChangeListener<String> { _, _, newValue ->
             var value = newValue.filter { it.isDigit() }
 
@@ -68,6 +76,7 @@ class UserFormController {
             }
         })
     }
+    //todo corrigir o bug de voltar para a tela inicial e clicar em outra tela
 
     @FXML
     private fun onFindAddressButtonClick() {
@@ -121,15 +130,14 @@ class UserFormController {
         }
     }
 
-    @FXML
-    lateinit var homeButton: Button
-    @FXML
-    private fun backToHome() {
-        val stage = homeButton.scene.window as Stage
-        val root = FXMLLoader.load<Parent>(javaClass.getResource("home.fxml"))
-        val scene = Scene(root, 500.0, 500.0)
-        stage.scene = scene
-    }
+
+//    @FXML
+//    private fun backToHome() {
+//        val stage = homeButton.scene.window as Stage
+//        val root = FXMLLoader.load<Parent>(javaClass.getResource("home.fxml"))
+//        val scene = Scene(root, 500.0, 500.0)
+//        stage.scene = scene
+//    }
 }
 
 

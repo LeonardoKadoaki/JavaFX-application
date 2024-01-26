@@ -1,5 +1,6 @@
 package com.mec.testejavafx.utils
 
+import javafx.beans.value.ChangeListener
 import javafx.scene.control.Alert
 import javafx.scene.control.TextField
 
@@ -32,4 +33,12 @@ fun showAlert(message: String, alertType: Alert.AlertType, alertTitle: String) {
     alert.headerText = null
     alert.contentText = message
     alert.showAndWait()
+}
+
+fun charLimit(textField: TextField, maxLength: Int) {
+    textField.textProperty().addListener(ChangeListener<String> { _, oldValue, newValue ->
+        if (newValue.length > maxLength) {
+            textField.text = oldValue
+        }
+    })
 }

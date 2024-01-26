@@ -27,7 +27,6 @@ class UserFormController {
     @FXML
     private lateinit var telefone: TextField
 
-
     @FXML
     private lateinit var cep: TextField
 

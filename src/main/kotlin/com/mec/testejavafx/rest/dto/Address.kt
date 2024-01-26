@@ -1,4 +1,4 @@
-package com.mec.testejavafx.rest
+package com.mec.testejavafx.rest.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

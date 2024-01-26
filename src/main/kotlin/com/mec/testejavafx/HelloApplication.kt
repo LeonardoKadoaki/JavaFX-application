@@ -31,22 +31,23 @@ class Main : Application() {
     override fun start(primaryStage: Stage) {
         val loader = FXMLLoader(javaClass.getResource("home2.fxml"))
         val root = loader.load<Parent>()
-        val controller = loader.getController<HomeController>()
-        controller.setStage(primaryStage)
+//        val controller = loader.getController<HomeController>()
+//        controller.setStage(primaryStage)
+//
+//        // Obtém as dimensões da tela
+//        val screenSize = Screen.getPrimary().bounds
+//        val screenWidth = screenSize.width
+//        val screenHeight = screenSize.height
+//
+//        controller.screenWidth = screenWidth
+//        controller.screenHeight = screenHeight
+//
+//        // Define a largura e altura da cena como uma porcentagem das dimensões da tela
+//        val width = screenWidth * 0.4
+//        val height = screenHeight * 0.5
 
-        // Obtém as dimensões da tela
-        val screenSize = Screen.getPrimary().bounds
-        val screenWidth = screenSize.width
-        val screenHeight = screenSize.height
-
-        controller.screenWidth = screenWidth
-        controller.screenHeight = screenHeight
-
-        // Define a largura e altura da cena como uma porcentagem das dimensões da tela
-        val width = screenWidth * 0.4 // 100% da largura da tela
-        val height = screenHeight * 0.5 // 90% da altura da tela
-
-        primaryStage.scene = Scene(root, width, height)
+//        primaryStage.scene = Scene(root, width, height)
+        primaryStage.scene = Scene(root)
         primaryStage.title = "Página Inicial"
         primaryStage.show()
     }

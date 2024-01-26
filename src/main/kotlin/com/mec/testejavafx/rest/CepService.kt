@@ -1,5 +1,6 @@
 package com.mec.testejavafx.rest
 
+import com.mec.testejavafx.rest.dto.Address
 import com.mec.testejavafx.utils.jsonToObject
 import java.net.HttpURLConnection
 import java.net.URL
